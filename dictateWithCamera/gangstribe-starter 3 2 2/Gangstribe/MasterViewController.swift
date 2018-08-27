@@ -27,7 +27,7 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
- //  Source: https://www.raywenderlich.com/573-speech-recognition-tutorial-for-ios for live audio
+ // Source: https://www.raywenderlich.com/573-speech-recognition-tutorial-for-ios for live audio
 
 import UIKit
 
