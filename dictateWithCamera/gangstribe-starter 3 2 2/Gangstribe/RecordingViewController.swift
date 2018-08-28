@@ -30,6 +30,7 @@
 
 import UIKit
 import AVFoundation
+import Speech
 
 class RecordingViewController: UIViewController {
   
@@ -103,6 +104,21 @@ class RecordingViewController: UIViewController {
 extension RecordingViewController {
   
   @IBAction func handleTranscribeButtonTapped(_ sender: BorderedButton) {
+    SFSpeechRecognizer.requestAuthorization {
+        [unowned self] (authStatus) in
+        switch authStatus {
+        case .authorized:
+            if let recording = self.recording {
+                self.transcribeFile(url: recording.audio, locale: recording.locale)
+            }
+        case .denied:
+            print("Speech recognition authorization denied")
+        case .restricted:
+            print("Not available on this device")
+        case .notDetermined:
+            print("Not determined")
+        }
+    }
   }
   
   fileprivate func updateUIForTranscriptionInProgress() {
@@ -127,4 +143,37 @@ extension RecordingViewController {
       })
     }
   }
+    
+    fileprivate func transcribeFile(url: URL, locale: Locale?) {
+        let locale = locale ?? Locale.current
+        
+        guard let recognizer = SFSpeechRecognizer(locale: locale) else {
+            print("Speech recognition not available for specified locale")
+            return
+        }
+        
+        if !recognizer.isAvailable {
+            print("Speech recognition not currently available")
+            return
+        }
+        
+        // 2
+        updateUIForTranscriptionInProgress()
+        let request = SFSpeechURLRecognitionRequest(url: url)
+        
+        // 3
+        recognizer.recognitionTask(with: request) {
+            [unowned self] (result, error) in
+            guard let result = result else {
+                print("There was an error transcribing that file")
+                return
+            }
+            
+            // 4
+            if result.isFinal {
+                self.updateUIWithCompletedTranscription(
+                    result.bestTranscription.formattedString)
+            }
+        }
+    }
 }
