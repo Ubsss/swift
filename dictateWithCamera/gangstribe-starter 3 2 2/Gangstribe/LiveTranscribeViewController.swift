@@ -50,6 +50,7 @@ class LiveTranscribeViewController: UIViewController {
   
   @IBOutlet weak var transcriptionOutputLabel: UILabel!
   
+    // check this function for what happens when the button is tapped again
   @IBAction func handleDoneTapped(_ sender: BorderedButton) {
     faceReplacer.stopCapture()
     stopRecording()

@@ -7,29 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8F761B47213235E700B84D29 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F761B46213235E700B84D29 /* AppDelegate.swift */; };
-		8F761B4C213235E700B84D29 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F761B4A213235E700B84D29 /* Main.storyboard */; };
-		8F761B4E213235E900B84D29 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8F761B4D213235E900B84D29 /* Assets.xcassets */; };
-		8F761B51213235E900B84D29 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F761B4F213235E900B84D29 /* LaunchScreen.storyboard */; };
-		8F761B5C213248D200B84D29 /* circleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F761B5B213248D200B84D29 /* circleButton.swift */; };
-		8F761B6221325BAD00B84D29 /* testRecording.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 8F761B6121325BAD00B84D29 /* testRecording.m4a */; };
-		8FF674A1213C7F2C00C73876 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FF674A0213C7F2C00C73876 /* ViewController.swift */; };
+		8FABA424213C3DEA00FC5ECB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FABA423213C3DEA00FC5ECB /* AppDelegate.swift */; };
+		8FABA429213C3DEA00FC5ECB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8FABA427213C3DEA00FC5ECB /* Main.storyboard */; };
+		8FABA42B213C3DEE00FC5ECB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8FABA42A213C3DEE00FC5ECB /* Assets.xcassets */; };
+		8FABA42E213C3DEE00FC5ECB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8FABA42C213C3DEE00FC5ECB /* LaunchScreen.storyboard */; };
+		8FF6749F213C648D00C73876 /* CircleEdge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FF6749E213C648D00C73876 /* CircleEdge.swift */; };
+		8FF674A3213C7F5300C73876 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FF674A2213C7F5300C73876 /* ViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		8F761B43213235E700B84D29 /* scribeSpeechToText.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = scribeSpeechToText.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		8F761B46213235E700B84D29 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		8F761B4B213235E700B84D29 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		8F761B4D213235E900B84D29 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		8F761B50213235E900B84D29 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		8F761B52213235E900B84D29 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8F761B5B213248D200B84D29 /* circleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = circleButton.swift; sourceTree = "<group>"; };
-		8F761B6121325BAD00B84D29 /* testRecording.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = testRecording.m4a; path = ../../testRecording.m4a; sourceTree = "<group>"; };
-		8FF674A0213C7F2C00C73876 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		8FABA420213C3DEA00FC5ECB /* voiceControl.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = voiceControl.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8FABA423213C3DEA00FC5ECB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		8FABA428213C3DEA00FC5ECB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8FABA42A213C3DEE00FC5ECB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8FABA42D213C3DEE00FC5ECB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		8FABA42F213C3DEE00FC5ECB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8FF6749E213C648D00C73876 /* CircleEdge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleEdge.swift; sourceTree = "<group>"; };
+		8FF674A2213C7F5300C73876 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		8F761B40213235E700B84D29 /* Frameworks */ = {
+		8FABA41D213C3DEA00FC5ECB /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -39,105 +37,104 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		8F761B3A213235E600B84D29 = {
+		8FABA417213C3DEA00FC5ECB = {
 			isa = PBXGroup;
 			children = (
-				8F761B45213235E700B84D29 /* scribeSpeechToText */,
-				8F761B44213235E700B84D29 /* Products */,
+				8FABA422213C3DEA00FC5ECB /* voiceControl */,
+				8FF674A4213C8C3D00C73876 /* Commands */,
+				8FABA421213C3DEA00FC5ECB /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		8F761B44213235E700B84D29 /* Products */ = {
+		8FABA421213C3DEA00FC5ECB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				8F761B43213235E700B84D29 /* scribeSpeechToText.app */,
+				8FABA420213C3DEA00FC5ECB /* voiceControl.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		8F761B45213235E700B84D29 /* scribeSpeechToText */ = {
+		8FABA422213C3DEA00FC5ECB /* voiceControl */ = {
 			isa = PBXGroup;
 			children = (
-				8F761B5D213252F400B84D29 /* resources */,
-				8F761B5A2132483A00B84D29 /* model */,
-				8F761B582132480800B84D29 /* view */,
-				8F761B592132481C00B84D29 /* controller */,
-				8F761B46213235E700B84D29 /* AppDelegate.swift */,
-				8F761B4A213235E700B84D29 /* Main.storyboard */,
-				8F761B4D213235E900B84D29 /* Assets.xcassets */,
-				8F761B4F213235E900B84D29 /* LaunchScreen.storyboard */,
-				8F761B52213235E900B84D29 /* Info.plist */,
+				8FABA427213C3DEA00FC5ECB /* Main.storyboard */,
+				8FABA42A213C3DEE00FC5ECB /* Assets.xcassets */,
+				8FABA423213C3DEA00FC5ECB /* AppDelegate.swift */,
+				8FABA42C213C3DEE00FC5ECB /* LaunchScreen.storyboard */,
+				8FABA42F213C3DEE00FC5ECB /* Info.plist */,
+				8FABA437213C402B00FC5ECB /* Views */,
+				8FABA436213C3FEB00FC5ECB /* Controllers */,
+				8FABA435213C3F7800FC5ECB /* Supporting Files */,
 			);
-			path = scribeSpeechToText;
+			path = voiceControl;
 			sourceTree = "<group>";
 		};
-		8F761B582132480800B84D29 /* view */ = {
+		8FABA435213C3F7800FC5ECB /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				8F761B5B213248D200B84D29 /* circleButton.swift */,
 			);
-			path = view;
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		8F761B592132481C00B84D29 /* controller */ = {
+		8FABA436213C3FEB00FC5ECB /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				8FF674A0213C7F2C00C73876 /* ViewController.swift */,
+				8FF674A2213C7F5300C73876 /* ViewController.swift */,
 			);
-			path = controller;
+			path = Controllers;
 			sourceTree = "<group>";
 		};
-		8F761B5A2132483A00B84D29 /* model */ = {
+		8FABA437213C402B00FC5ECB /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				8FF6749E213C648D00C73876 /* CircleEdge.swift */,
 			);
-			path = model;
+			path = Views;
 			sourceTree = "<group>";
 		};
-		8F761B5D213252F400B84D29 /* resources */ = {
+		8FF674A4213C8C3D00C73876 /* Commands */ = {
 			isa = PBXGroup;
 			children = (
-				8F761B6121325BAD00B84D29 /* testRecording.m4a */,
 			);
-			path = resources;
+			path = Commands;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		8F761B42213235E700B84D29 /* scribeSpeechToText */ = {
+		8FABA41F213C3DEA00FC5ECB /* voiceControl */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8F761B55213235E900B84D29 /* Build configuration list for PBXNativeTarget "scribeSpeechToText" */;
+			buildConfigurationList = 8FABA432213C3DEE00FC5ECB /* Build configuration list for PBXNativeTarget "voiceControl" */;
 			buildPhases = (
-				8F761B3F213235E700B84D29 /* Sources */,
-				8F761B40213235E700B84D29 /* Frameworks */,
-				8F761B41213235E700B84D29 /* Resources */,
+				8FABA41C213C3DEA00FC5ECB /* Sources */,
+				8FABA41D213C3DEA00FC5ECB /* Frameworks */,
+				8FABA41E213C3DEA00FC5ECB /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = scribeSpeechToText;
-			productName = scribeSpeechToText;
-			productReference = 8F761B43213235E700B84D29 /* scribeSpeechToText.app */;
+			name = voiceControl;
+			productName = voiceControl;
+			productReference = 8FABA420213C3DEA00FC5ECB /* voiceControl.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		8F761B3B213235E600B84D29 /* Project object */ = {
+		8FABA418213C3DEA00FC5ECB /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0940;
 				LastUpgradeCheck = 0940;
 				ORGANIZATIONNAME = "Uchechukwu Uboh";
 				TargetAttributes = {
-					8F761B42213235E700B84D29 = {
+					8FABA41F213C3DEA00FC5ECB = {
 						CreatedOnToolsVersion = 9.4.1;
 					};
 				};
 			};
-			buildConfigurationList = 8F761B3E213235E600B84D29 /* Build configuration list for PBXProject "scribeSpeechToText" */;
+			buildConfigurationList = 8FABA41B213C3DEA00FC5ECB /* Build configuration list for PBXProject "voiceControl" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -145,56 +142,55 @@
 				en,
 				Base,
 			);
-			mainGroup = 8F761B3A213235E600B84D29;
-			productRefGroup = 8F761B44213235E700B84D29 /* Products */;
+			mainGroup = 8FABA417213C3DEA00FC5ECB;
+			productRefGroup = 8FABA421213C3DEA00FC5ECB /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				8F761B42213235E700B84D29 /* scribeSpeechToText */,
+				8FABA41F213C3DEA00FC5ECB /* voiceControl */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		8F761B41213235E700B84D29 /* Resources */ = {
+		8FABA41E213C3DEA00FC5ECB /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8F761B51213235E900B84D29 /* LaunchScreen.storyboard in Resources */,
-				8F761B6221325BAD00B84D29 /* testRecording.m4a in Resources */,
-				8F761B4E213235E900B84D29 /* Assets.xcassets in Resources */,
-				8F761B4C213235E700B84D29 /* Main.storyboard in Resources */,
+				8FABA42E213C3DEE00FC5ECB /* LaunchScreen.storyboard in Resources */,
+				8FABA42B213C3DEE00FC5ECB /* Assets.xcassets in Resources */,
+				8FABA429213C3DEA00FC5ECB /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		8F761B3F213235E700B84D29 /* Sources */ = {
+		8FABA41C213C3DEA00FC5ECB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8FF674A1213C7F2C00C73876 /* ViewController.swift in Sources */,
-				8F761B5C213248D200B84D29 /* circleButton.swift in Sources */,
-				8F761B47213235E700B84D29 /* AppDelegate.swift in Sources */,
+				8FF674A3213C7F5300C73876 /* ViewController.swift in Sources */,
+				8FF6749F213C648D00C73876 /* CircleEdge.swift in Sources */,
+				8FABA424213C3DEA00FC5ECB /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		8F761B4A213235E700B84D29 /* Main.storyboard */ = {
+		8FABA427213C3DEA00FC5ECB /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				8F761B4B213235E700B84D29 /* Base */,
+				8FABA428213C3DEA00FC5ECB /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		8F761B4F213235E900B84D29 /* LaunchScreen.storyboard */ = {
+		8FABA42C213C3DEE00FC5ECB /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				8F761B50213235E900B84D29 /* Base */,
+				8FABA42D213C3DEE00FC5ECB /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -202,7 +198,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		8F761B53213235E900B84D29 /* Debug */ = {
+		8FABA430213C3DEE00FC5ECB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -262,7 +258,7 @@
 			};
 			name = Debug;
 		};
-		8F761B54213235E900B84D29 /* Release */ = {
+		8FABA431213C3DEE00FC5ECB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -316,34 +312,34 @@
 			};
 			name = Release;
 		};
-		8F761B56213235E900B84D29 /* Debug */ = {
+		8FABA433213C3DEE00FC5ECB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = scribeSpeechToText/Info.plist;
+				INFOPLIST_FILE = voiceControl/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.uu.scribeSpeechToText;
+				PRODUCT_BUNDLE_IDENTIFIER = com.uu.voiceControl;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		8F761B57213235E900B84D29 /* Release */ = {
+		8FABA434213C3DEE00FC5ECB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = scribeSpeechToText/Info.plist;
+				INFOPLIST_FILE = voiceControl/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.uu.scribeSpeechToText;
+				PRODUCT_BUNDLE_IDENTIFIER = com.uu.voiceControl;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -353,25 +349,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		8F761B3E213235E600B84D29 /* Build configuration list for PBXProject "scribeSpeechToText" */ = {
+		8FABA41B213C3DEA00FC5ECB /* Build configuration list for PBXProject "voiceControl" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				8F761B53213235E900B84D29 /* Debug */,
-				8F761B54213235E900B84D29 /* Release */,
+				8FABA430213C3DEE00FC5ECB /* Debug */,
+				8FABA431213C3DEE00FC5ECB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8F761B55213235E900B84D29 /* Build configuration list for PBXNativeTarget "scribeSpeechToText" */ = {
+		8FABA432213C3DEE00FC5ECB /* Build configuration list for PBXNativeTarget "voiceControl" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				8F761B56213235E900B84D29 /* Debug */,
-				8F761B57213235E900B84D29 /* Release */,
+				8FABA433213C3DEE00FC5ECB /* Debug */,
+				8FABA434213C3DEE00FC5ECB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 8F761B3B213235E600B84D29 /* Project object */;
+	rootObject = 8FABA418213C3DEA00FC5ECB /* Project object */;
 }

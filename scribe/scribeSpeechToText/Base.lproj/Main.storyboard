@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PIb-wf-gx3">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="55"/>
+                                <rect key="frame" x="0.0" y="-66" width="375" height="55"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Scribe" textAlignment="justified" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FDX-cv-stx">
                                         <rect key="frame" x="144" y="16" width="95" height="43"/>
@@ -65,46 +65,59 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Tap button below to transcribe pre-loaded audio file... " textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Niy-FT-gvP">
-                                <rect key="frame" x="20" y="75" width="335" height="463"/>
+                                <rect key="frame" x="20" y="9" width="335" height="463"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="335" id="ggP-VA-AYh"/>
-                                    <constraint firstAttribute="height" constant="463" id="nTN-b9-TkV"/>
+                                    <constraint firstAttribute="height" constant="463" id="vLc-5f-nzi"/>
                                 </constraints>
                                 <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="Igg-qI-gvd">
-                                <rect key="frame" x="157.5" y="558.5" width="60" height="50"/>
+                                <rect key="frame" x="157" y="558" width="60" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="60" id="Kgl-WZ-csY"/>
                                     <constraint firstAttribute="height" constant="50" id="PgS-dH-zSL"/>
                                 </constraints>
                             </activityIndicatorView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="jCj-EC-eWm">
+                                <rect key="frame" x="20" y="488" width="335" height="62"/>
+                                <color key="backgroundColor" red="1" green="0.97361698608339708" blue="0.87863899578530158" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="335" id="9ys-a9-IGq"/>
+                                    <constraint firstAttribute="height" constant="62" id="Evw-Oe-6rj"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="Niy-FT-gvP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="2eS-wu-YtP"/>
                             <constraint firstItem="edW-Y4-c8S" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="8Xp-DQ-PNo"/>
                             <constraint firstItem="G47-Aj-9VM" firstAttribute="top" secondItem="edW-Y4-c8S" secondAttribute="bottom" constant="8" id="8zX-Bz-jFs"/>
+                            <constraint firstItem="edW-Y4-c8S" firstAttribute="top" secondItem="jCj-EC-eWm" secondAttribute="bottom" constant="8" id="Aa8-pg-Jgn"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="G47-Aj-9VM" secondAttribute="bottom" constant="5" id="AlT-xn-RdE"/>
                             <constraint firstItem="Igg-qI-gvd" firstAttribute="centerX" secondItem="edW-Y4-c8S" secondAttribute="centerX" id="D3Z-Md-qi6"/>
+                            <constraint firstItem="jCj-EC-eWm" firstAttribute="top" secondItem="Niy-FT-gvP" secondAttribute="bottom" constant="16" id="JfF-AI-wf3"/>
                             <constraint firstItem="G47-Aj-9VM" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="LiK-LA-2UE"/>
-                            <constraint firstItem="Niy-FT-gvP" firstAttribute="top" secondItem="PIb-wf-gx3" secondAttribute="bottom" constant="20" id="aje-TW-ema"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="jCj-EC-eWm" secondAttribute="trailing" constant="20" id="MPF-pb-iLB"/>
+                            <constraint firstItem="Niy-FT-gvP" firstAttribute="centerX" secondItem="edW-Y4-c8S" secondAttribute="centerX" id="Q60-Bt-5vr"/>
+                            <constraint firstItem="Niy-FT-gvP" firstAttribute="centerX" secondItem="Igg-qI-gvd" secondAttribute="centerX" id="SMK-uj-aHj"/>
                             <constraint firstItem="G47-Aj-9VM" firstAttribute="top" secondItem="edW-Y4-c8S" secondAttribute="bottom" constant="5" id="bP4-4h-aDY"/>
-                            <constraint firstItem="edW-Y4-c8S" firstAttribute="top" secondItem="Niy-FT-gvP" secondAttribute="bottom" constant="20" id="el9-4w-bYZ"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Niy-FT-gvP" secondAttribute="trailing" constant="20" id="ml8-iM-JcS"/>
+                            <constraint firstItem="Niy-FT-gvP" firstAttribute="top" secondItem="PIb-wf-gx3" secondAttribute="bottom" constant="20" id="cew-cp-5Sr"/>
+                            <constraint firstItem="Niy-FT-gvP" firstAttribute="trailing" secondItem="jCj-EC-eWm" secondAttribute="trailing" id="jL2-2j-fhm"/>
                             <constraint firstItem="Igg-qI-gvd" firstAttribute="centerY" secondItem="edW-Y4-c8S" secondAttribute="centerY" id="opc-p2-JYC"/>
-                            <constraint firstItem="Niy-FT-gvP" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="phw-y6-PlS"/>
+                            <constraint firstItem="Niy-FT-gvP" firstAttribute="leading" secondItem="jCj-EC-eWm" secondAttribute="leading" id="r3v-4a-3lG"/>
                             <constraint firstItem="PIb-wf-gx3" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="rZ4-C3-5hj"/>
+                            <constraint firstItem="jCj-EC-eWm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="s4Q-oL-Hs4"/>
                             <constraint firstItem="PIb-wf-gx3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="vB8-sP-X8o"/>
-                            <constraint firstItem="Niy-FT-gvP" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="vfh-Lu-kiO"/>
                             <constraint firstItem="PIb-wf-gx3" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="yhn-Hu-0j2"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="CMDWindow" destination="jCj-EC-eWm" id="eQ3-Vw-ijU"/>
                         <outlet property="activitySpinner" destination="Igg-qI-gvd" id="cJj-US-ZbE"/>
                         <outlet property="transcriptionTextField" destination="Niy-FT-gvP" id="tm4-Uq-SPQ"/>
                     </connections>

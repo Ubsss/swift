@@ -7,14 +7,16 @@
 //  Source: https://www.youtube.com/watch?v=2gs5QTRC8Yk for UI and initial audio scribing
 
 
+
 import UIKit
 import Speech
 import AVFoundation
 
 class ViewController: UIViewController, AVAudioPlayerDelegate{
-
+    
     @IBOutlet weak var activitySpinner: UIActivityIndicatorView!
     @IBOutlet weak var transcriptionTextField: UITextView!
+    @IBOutlet weak var CMDWindow: UITextView!
     
     var audioPlayer: AVAudioPlayer!
     
@@ -22,11 +24,12 @@ class ViewController: UIViewController, AVAudioPlayerDelegate{
         super.viewDidLoad()
         activitySpinner.isHidden = true
     }
-
+    
     func audioPlayerDidFinishPlaying(_ player: AVAudioPlayer, successfully flag: Bool) {
         player.stop()
         activitySpinner.stopAnimating()
         activitySpinner.isHidden = true
+        transcriptionInterpretation()
     }
     
     func requestSpeechAuth(){
@@ -55,7 +58,7 @@ class ViewController: UIViewController, AVAudioPlayerDelegate{
             }
         }
     }
-
+    
     @IBAction func playButtonPressed(_ sender: Any) {
         activitySpinner.isHidden = false
         activitySpinner.startAnimating()
@@ -63,3 +66,21 @@ class ViewController: UIViewController, AVAudioPlayerDelegate{
     }
 }
 
+extension ViewController{
+    func transcriptionInterpretation() {
+    
+        self.CMDWindow.text = "Your command will show here"
+        if self.transcriptionTextField.text !=  " " {
+            
+            let interpretation = String(self.transcriptionTextField.text!)
+                if interpretation.contains("test") && interpretation.contains("recording"){
+                    self.CMDWindow.text = "Yes, this is a test!"
+                } else {
+                    self.CMDWindow.text = "No instructions where found in your recording!"
+                }
+
+        } else {
+            self.CMDWindow.text = "Please repeat a valid comand"
+        }
+    }
+}
