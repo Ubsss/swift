@@ -12,6 +12,7 @@ import UIKit
 class ViewController: UIViewController {
     
     @IBOutlet weak var display: UILabel!
+    @IBOutlet weak var feedback: UILabel!
     
     // Arithmetic operations tag numbers from UI
     let posNeg = -8
@@ -21,15 +22,14 @@ class ViewController: UIViewController {
     let subtract = -4
     let add = -3
     
+    // Holds selected operation
     var operations: Int = 0
     
+    // Input values checks
     var numb1Filled: Bool = false
     var numb2Filled: Bool = false
     var decimalInOperand: Bool = false
     
-    
-    // Holds solutions to calculations
-    var answer: Double = 0.0
     // Holds first operand
     var numb1 = 0.0
     // Holds second operand
@@ -37,7 +37,8 @@ class ViewController: UIViewController {
     
     // Shows on the screen
     var displayText: String = "0"
-    
+    var feedbackText: String = "Welcome to MyCalc! 😄"
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -45,12 +46,14 @@ class ViewController: UIViewController {
     
     // updates the display view - DONE
     func updateDisplay(){
+        feedback.text = feedbackText
         display.text = displayText
     }
     
     // check the numbers selected - DONE
     @IBAction func numPress(sender: UIButton){
         if (sender.tag >= -1 && sender.tag <= 9){
+        if(displayText.count <= 8){
             if(displayText == "0"){
                 displayText = ""
             }
@@ -77,10 +80,24 @@ class ViewController: UIViewController {
             }
             displayText += String(sender.tag)
             updateDisplay()
+        }else{
+            feedbackText = "Max operenad length reached! 😉"
+            updateDisplay()
+            }
         }
     }
     
+    // change sign of operand - DONE
     @IBAction func changeSign(){
+        if(displayText != "0"){
+            if(displayText[displayText.startIndex] != "-"){
+                displayText.insert("-", at: displayText.startIndex)
+                updateDisplay()
+            }else{
+                displayText.remove(at: displayText.startIndex)
+                updateDisplay()
+            }
+        }
     }
     
     // check the operation selected - DONE
@@ -99,6 +116,12 @@ class ViewController: UIViewController {
                 }
             }
             
+            if(sender.tag != -2 && operations != 0){
+                feedbackText = "One operation at a time! Please calculate with '=' or clear with 'C' . 😉"
+                updateDisplay()
+                return
+            }
+            
             if (sender.tag == -2 && operations != 0){
                 switch operations {
                 case (add):
@@ -110,7 +133,9 @@ class ViewController: UIViewController {
                 case (divide):
                     // check if numb2 is 0
                     if(numb2 == 0){
+                        feedbackText = "Sorry, can't divide by Zero! 😟"
                         numb2Filled = false
+                        updateDisplay()
                         return
                     }
                     divide(numb1, numb2)
@@ -120,7 +145,9 @@ class ViewController: UIViewController {
                     break
                 case (mod):
                     if(numb2 == 0){
+                        feedbackText = "Sorry, can't mod by Zero! 😟"
                         numb2Filled = false
+                        updateDisplay()
                         return
                     }
                     mod(numb1, numb2)
@@ -133,15 +160,15 @@ class ViewController: UIViewController {
     
     // reset display - DONE
     @IBAction func clear(_ sender: UIButton) {
-        answer = 0.0
         resetOperands()
         displayText = "0"
         decimalInOperand = false
         operations = 0
+        feedbackText = "All operands cleared 😄"
         updateDisplay()
     }
     
-    // fill operands
+    // fill operands - DONE
     func fillOperands(){
         if(numb1Filled == false){
             numb1 = Double(displayText) as! Double
@@ -170,38 +197,42 @@ class ViewController: UIViewController {
     // math operations
     // addition - DONE
     func additon(_ a: Double, _ b: Double){
-        displayText = String(a + b)//"\(a) + \(b) = \(a + b)"
+        feedbackText = "\(a) + \(b) = "
+        displayText = String(a + b)
         updateDisplay()
         resetOperands()
     }
     
     // subtraction - DONE
     func subtraction(_ a: Double, _ b: Double){
-        displayText = String(a - b) //"\(a) - \(b) = \(a - b)"
+        feedbackText = "\(a) - \(b) = "
+        displayText = String(a - b)
         updateDisplay()
         resetOperands()
     }
     
     // multiply - DONE
     func multiply(_ a: Double, _ b: Double){
-        displayText = String(a * b) // "\(a) * \(b) = \(a * b)"
+        feedbackText = "\(a) * \(b) = "
+        displayText = String(a * b)
         updateDisplay()
         resetOperands()
     }
     
     // divide - DONE
     func divide(_ a: Double, _ b: Double){
-        displayText = String(a / b) // "\(a) / \(b) = \(a / b)"
+        feedbackText = "\(a) / \(b) = "
+        displayText = String(a / b)
         updateDisplay()
         resetOperands()
     }
     
     // mod - DONE
     func mod(_ a: Double, _ b: Double){
-        displayText = String(a.truncatingRemainder(dividingBy: b)) //"\(a) mod \(b) = \(a.truncatingRemainder(dividingBy: b))"
+        feedbackText = "\(a) mod \(b) = "
+        displayText = String(a.truncatingRemainder(dividingBy: b))
         updateDisplay()
         resetOperands()
     }
 
 }
-
