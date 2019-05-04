@@ -13,17 +13,19 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var display: UILabel!
     
+    // Arithmetic operations tag numbers from UI
     let posNeg = -8
     let mod = -7
     let divide = -6
     let multiply = -5
     let subtract = -4
     let add = -3
-    let equals = -2
-    let dot = -1
+    
+    var operations: Int = 0
     
     var numb1Filled: Bool = false
     var numb2Filled: Bool = false
+    var decimalInOperand: Bool = false
     
     
     // Holds solutions to calculations
@@ -41,39 +43,101 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    // updates the display view
+    // updates the display view - DONE
     func updateDisplay(){
         display.text = displayText
     }
     
-    // check the number pressed
+    // check the numbers selected - DONE
     @IBAction func numPress(sender: UIButton){
-        if (sender.tag >= 0 && sender.tag <= 9){
+        if (sender.tag >= -1 && sender.tag <= 9){
             if(displayText == "0"){
                 displayText = ""
+            }
+            
+            if(sender.tag == -1){
+                if(decimalInOperand == false){
+                    decimalInOperand = true
+                    if(displayText == ""){
+                        displayText += "0"
+                        updateDisplay()
+                    }
+                    for i in displayText{
+                        if i == "."{
+                            return
+                        }
+                    }
+                    displayText += "."
+                    updateDisplay()
+                    return
+                    
+                }else{
+                    return
+                }
             }
             displayText += String(sender.tag)
             updateDisplay()
         }
     }
     
-    // check the operation pressed
+    @IBAction func changeSign(){
+    }
+    
+    // check the operation selected - DONE
     @IBAction func operation(_ sender: UIButton){
-        if(numb1Filled == false || numb2Filled == false){
-            fillOperands()
-            return
-        }
-        
         // perfrom calculation using switch case
         if(sender.tag <= -2 && sender.tag >= -7){
+            if(numb1Filled == false || numb2Filled == false){
+                if(numb1Filled == false && operations == 0){
+                    if(sender.tag != -2){
+                        operations = sender.tag
+                    }
+                }
+                fillOperands()
+                if(numb2Filled != true){
+                    return
+                }
+            }
             
+            if (sender.tag == -2 && operations != 0){
+                switch operations {
+                case (add):
+                    additon(numb1, numb2)
+                    break
+                case (subtract):
+                    subtraction(numb1, numb2)
+                    break
+                case (divide):
+                    // check if numb2 is 0
+                    if(numb2 == 0){
+                        numb2Filled = false
+                        return
+                    }
+                    divide(numb1, numb2)
+                    break
+                case (multiply):
+                    multiply(numb1, numb2)
+                    break
+                case (mod):
+                    if(numb2 == 0){
+                        numb2Filled = false
+                        return
+                    }
+                    mod(numb1, numb2)
+                    break
+                default: break
+                }
+            }
         }
     }
     
-    // reset display
+    // reset display - DONE
     @IBAction func clear(_ sender: UIButton) {
         answer = 0.0
+        resetOperands()
         displayText = "0"
+        decimalInOperand = false
+        operations = 0
         updateDisplay()
     }
     
@@ -84,45 +148,59 @@ class ViewController: UIViewController {
             displayText = "0"
             updateDisplay()
             numb1Filled = true
-        }
-        
-        if(numb2Filled == false && numb1Filled == true){
+            decimalInOperand = false
+        }else{
             numb2 = Double(displayText) as! Double
             displayText = "0"
             updateDisplay()
             numb2Filled = true
+            decimalInOperand = false
         }
     }
     
-    // reset operands values
+    // reset operands values - DONE
     func resetOperands(){
+        numb1 = 0.0
+        numb2 = 0.0
+        operations = 0
         numb2Filled = false
         numb1Filled = false
     }
     
     // math operations
-    // addition
+    // addition - DONE
     func additon(_ a: Double, _ b: Double){
-        displayText = String(a + b)
+        displayText = String(a + b)//"\(a) + \(b) = \(a + b)"
         updateDisplay()
+        resetOperands()
     }
     
-    // subtraction
+    // subtraction - DONE
     func subtraction(_ a: Double, _ b: Double){
-        displayText = String(a - b)
+        displayText = String(a - b) //"\(a) - \(b) = \(a - b)"
         updateDisplay()
+        resetOperands()
     }
     
-    // multiply
+    // multiply - DONE
     func multiply(_ a: Double, _ b: Double){
-        displayText = String(a * b)
+        displayText = String(a * b) // "\(a) * \(b) = \(a * b)"
         updateDisplay()
+        resetOperands()
     }
     
-    // divide
+    // divide - DONE
     func divide(_ a: Double, _ b: Double){
-        displayText = String(a / b)
+        displayText = String(a / b) // "\(a) / \(b) = \(a / b)"
         updateDisplay()
+        resetOperands()
+    }
+    
+    // mod - DONE
+    func mod(_ a: Double, _ b: Double){
+        displayText = String(a.truncatingRemainder(dividingBy: b)) //"\(a) mod \(b) = \(a.truncatingRemainder(dividingBy: b))"
+        updateDisplay()
+        resetOperands()
     }
 
 }
