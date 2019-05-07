@@ -15,6 +15,8 @@
 		8F56308A2274E9B000755CE1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F5630882274E9B000755CE1 /* LaunchScreen.storyboard */; };
 		8F5630952274E9B000755CE1 /* calcTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F5630942274E9B000755CE1 /* calcTests.swift */; };
 		8F5630A02274E9B000755CE1 /* calcUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F56309F2274E9B000755CE1 /* calcUITests.swift */; };
+		8F63BCF4227E22A50028D6C1 /* CircleEdgeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F63BCF3227E22A50028D6C1 /* CircleEdgeButton.swift */; };
+		8F63BCF6227E247F0028D6C1 /* CircleEdgeLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F63BCF5227E247F0028D6C1 /* CircleEdgeLabel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		8F56309B2274E9B000755CE1 /* calcUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = calcUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F56309F2274E9B000755CE1 /* calcUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = calcUITests.swift; sourceTree = "<group>"; };
 		8F5630A12274E9B000755CE1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8F63BCF3227E22A50028D6C1 /* CircleEdgeButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleEdgeButton.swift; sourceTree = "<group>"; };
+		8F63BCF5227E247F0028D6C1 /* CircleEdgeLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleEdgeLabel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,8 +103,9 @@
 		8F56307B2274E9AE00755CE1 /* calc */ = {
 			isa = PBXGroup;
 			children = (
+				8F63BCF2227E225C0028D6C1 /* controller */,
+				8F63BCF1227E22470028D6C1 /* view */,
 				8F56307C2274E9AE00755CE1 /* AppDelegate.swift */,
-				8F56307E2274E9AE00755CE1 /* ViewController.swift */,
 				8F5630802274E9AE00755CE1 /* Main.storyboard */,
 				8F5630862274E9B000755CE1 /* Assets.xcassets */,
 				8F5630882274E9B000755CE1 /* LaunchScreen.storyboard */,
@@ -126,6 +131,23 @@
 				8F5630A12274E9B000755CE1 /* Info.plist */,
 			);
 			path = calcUITests;
+			sourceTree = "<group>";
+		};
+		8F63BCF1227E22470028D6C1 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				8F63BCF3227E22A50028D6C1 /* CircleEdgeButton.swift */,
+				8F63BCF5227E247F0028D6C1 /* CircleEdgeLabel.swift */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		8F63BCF2227E225C0028D6C1 /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				8F56307E2274E9AE00755CE1 /* ViewController.swift */,
+			);
+			path = controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -261,6 +283,8 @@
 			files = (
 				8F5630852274E9AE00755CE1 /* calc.xcdatamodeld in Sources */,
 				8F56307F2274E9AE00755CE1 /* ViewController.swift in Sources */,
+				8F63BCF4227E22A50028D6C1 /* CircleEdgeButton.swift in Sources */,
+				8F63BCF6227E247F0028D6C1 /* CircleEdgeLabel.swift in Sources */,
 				8F56307D2274E9AE00755CE1 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
